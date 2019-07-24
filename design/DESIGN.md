@@ -2,6 +2,13 @@
 This document lays out the WIP design of Leviathan, a highly approximate model of 'societal' behavior.
 It will be subject to frequent change as better design choices become apparent.
 
+## Leading Questions
+- Can certain societal behaviors be effectively modeled as multiagent problems?
+    - See Wooldridge "Intro. to Multiagent Systems"
+- What specific techniques might be applicable? To what situations?
+
+## Problem(s) and Objective(s)
+
 ## Scope and Granularity
 Before making any design decisions, it will help to first lay out expectations for the scope and
 granularity of the project. By this, we mean both the breadth of the simulation, and the depth
@@ -24,12 +31,12 @@ parametrized by two angular coordinates. This removes the unnatural walls. Leavi
 could represent the world abstractly as a graph, with (potentially weighted) edges representing paths
 between nodes representing locations.
 
-### The Actor
-A person/sentient being/member of society in Leviathan is called an *actor*. In most respects, actors
+### Agents
+A person/sentient being/member of society in Leviathan is called an *agent*. In most respects, agents
 are the primary subjects of this simulation. For this reason, they deserve the most detail (i.e. the
-highest granularity). Actors have *intrinsic components*, like a measure of health (which may be
-further deconstructed), maybe some kind of memory, etc. They also have *extrinsic components* which are tied to the society/world in some capacity, like capital or relationships. Actors also have
-*sensors*, which digest the physical world into actionable information. Naturally, actors then have
+highest granularity). Agents have *intrinsic components*, like a measure of health (which may be
+further deconstructed), maybe some kind of memory, etc. They also have *extrinsic components* which are tied to the society/world in some capacity, like capital or relationships. Agents also have
+*sensors*, which digest the physical world into actionable information. Naturally, agents then have
 *motors* which allow them to affect the physical world.
 
 **Question.** Is this too much detail?
